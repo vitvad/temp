@@ -1,0 +1,13 @@
+{
+	"name": "Ololo extension",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": {
+		"16": "tt.png" 
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"description": "Add to context menu new items",
+	"permissions": ["contextMenus","tabs","http://translate.google.ru/*","notifications"]
+}
