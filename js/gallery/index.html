@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Project</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/all.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/gallery.min.js"></script>
+</head>
+<body>
+	<div id="page">
+		<p style="font-size:20px;text-align:center;font-weight:bold;">TEST PAGE</p>
+		<h1>Current options</h1>
+		<table class="options">
+			<tr>
+				<th>Option name/value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>btnPrev: '.prev'</td>
+				<td>html selector for prev button</td>
+			</tr>
+			<tr>
+				<td>btnNext: '.next'</td>
+				<td>html selector for next button</td>
+			</tr>
+			<tr>
+				<td>holder: 'div'</td>
+				<td>html selector for gallery main holder</td>
+			</tr>
+			<tr>
+				<td>scrollElParent: 'ul'</td>
+				<td>html selector for gallery main part which will scroll</td>
+			</tr>
+			<tr>
+				<td>scrollEl: 'li'</td>
+				<td>html selector for elements wrapper of gallery</td>
+			</tr>
+			<tr>
+				<td>numHolder: false (false of css selector)</td>
+				<td>html selector for thumbs links holder</td>
+			</tr>
+			<tr>
+				<td>numCreate: false (true of false)</td>
+				<td>create dinamicly thumbs or use already existed in html</td>
+			</tr>
+			<tr>
+				<td>thumbTag: "a"</td>
+				<td>html selector for thumbs links</td>
+			</tr>
+			<tr>
+				<td>step: false (true, false, [number])</td>
+				<td>false - scroll on width of "holder" <br /> true - scroll on the element width <br /> [number] - scroll on exactly width in "px"</td>
+			</tr>
+			<tr>
+				<td>type: 'circle', //state "circle", "start-end" , "start-end-start"</td>
+				<td>Switch type of gallery scroll</td>
+			</tr>
+			<tr>
+				<td>direction: 'horisontal' ['vertical']</td>
+				<td>Switch type of gallery scroll</td>
+			</tr>
+			<tr>
+				<td>onClick: null</td>
+				<td>CallBack function example: onClick: function(){alert('My callback')}</td>
+			</tr>
+			<tr>
+				<td>onChangeFunc: null</td>
+				<td>onChangeFunc function example: onChangeFunc: function(){alert('My callback')}</td>
+			</tr>
+			<tr>
+				<td>easing: 'linear' [animation type: "linear" default - not need easing library]</td>
+				<td>see <a href="http://gsgd.co.uk/sandbox/jquery/easing/">easing</a><br />if we use other type need include easing library before gallery JS</td>
+			</tr>
+			<tr>
+				<td>switchTime: false [false or number time in ms]</td>
+				<td>Switch on/off autorotation example - switchTime:2000, //same as 2second</td>
+			</tr>
+			<tr>
+				<td>duration : 500 [number]</td>
+				<td>Time - how long animation continue</td>
+			</tr>
+		</table>
+	</div>
+	<div id="page">
+		<h1>Horisontal</h1>
+<!-- 1 -->
+		<h2>Circle</h2>
+		<div class="example">
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery1-1 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery1-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note"></p>
+				<div class="example">
+					<div class="gallery1-2 gallery">
+						<span class="btns prev">Prev</span>
+						<div class="holder">
+							<ul>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+							</ul>
+						</div>
+						<span class="btns next">Next</span>
+					</div>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery1-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							switchTime: 2500,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+		</div>
+		
+<!-- 2 -->
+		<div class="example">
+			<h2>Step = true</h3>
+			<div class="col">
+				<h3>Autorotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery2-1 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li style="width:130px"><a href="#">1</a></li>
+							<li style="width:170px"><a href="#">2</a></li>
+							<li style="width:90px"><a href="#">3</a></li>
+							<li style="width:250px"><a href="#">4</a></li>
+							<li style="width:150px"><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery2-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							numHolder: "<div class='thumbs'></div>",
+							numCreate: true,
+							//type: "start-end-start",
+							step: true,
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>Autorotation On</h3>
+				<p class="note"></p>
+				<div class="gallery2-2 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li style="width:130px"><a href="#">1</a></li>
+							<li style="width:170px"><a href="#">2</a></li>
+							<li style="width:90px"><a href="#">3</a></li>
+							<li style="width:210px"><a href="#">4</a></li>
+							<li style="width:300px"><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery2-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							numHolder: "<div class='thumbs'></div>",
+							numCreate: true,
+							//type: "start-end-start",
+							//type: "start-end",
+							step: true,
+							switchTime: 2500,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+		</div>
+
+<!-- 2-2 -->
+		<div class="example">
+			<h2>Step = 150px</h3>
+			<div class="col">
+				<h3>Autorotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery2-2-1 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery2-2-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							step: 150,
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>Autorotation On</h3>
+				<p class="note"></p>
+				<div class="gallery2-2-2 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery2-2-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							step: 150,
+							switchTime: 2500,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+		</div>
+
+<!-- 3 -->
+
+		<div class="example">
+			<h2>type - start-end</h2>
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery3-1 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery3-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							type: "start-end",
+							switchTime: false,
+							duration : 500
+						});
+					});
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note">maybe switch off autorotation ? </p>
+				<div class="gallery3-2 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery3-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							type: "start-end",
+							switchTime: 2500,
+							duration : 500
+						});
+					});
+				</script>
+			</div>
+		</div>
+
+<!-- 4 -->
+
+		<div class="example">
+			<h2>type - start-end-start</h2>
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery4-1 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery4-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							type: "start-end-start",
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note"></p>
+				<div class="gallery4-2 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery4-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							type: "start-end-start",
+							switchTime: 2500,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+		</div>
+
+<!-- 9 -->
+
+		<div class="example">
+			<h2>type - circle; numHolder: ".thumbs", numCreate: false,</h2>
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery9-1 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+					<ul class="thumbs">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+					</ul>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery9-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							numHolder: ".thumbs",
+							numCreate: false,
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note"></p>
+				<div class="gallery9-2 gallery">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery9-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							numHolder: "<div class='thumbs'></div>",
+							numCreate: true,
+							switchTime: 2500,
+							duration : 500
+						});
+					});
+				</script>
+			</div>
+		</div>
+
+<!-- 6 -->
+
+		<h1>Vertival</h1>
+
+		<div class="example">
+			<h2>type - circle</h2>
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery6-1 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery6-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							direction: 'vertical',
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note"></p>
+				<div class="gallery6-2 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery6-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							direction: 'vertical',
+							switchTime: 2500,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+		</div>
+
+<!-- 7 -->
+
+		<div class="example">
+			<h2>type - start-end</h2>
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery7-1 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery7-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							direction: 'vertical',
+							type: "start-end",
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note"></p>
+				<div class="gallery7-2 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery7-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							direction: 'vertical',
+							type: "start-end",
+							switchTime: 2500,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+		</div>
+
+<!-- 8 -->
+
+		<div class="example">
+			<h2>type - start-end-start</h2>
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery8-1 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery8-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							direction: 'vertical',
+							type: "start-end-start",
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note"></p>
+				<div class="gallery8-2 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery8-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							direction: 'vertical',
+							type: "start-end-start",
+							switchTime: 2500,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+		</div>
+
+<!-- 10 -->
+
+		<div class="example">
+			<h2>type - circle; numHolder: ".thumbs", numCreate: false,</h2>
+			<div class="col">
+				<h3>AutoRotation Off</h3>
+				<p class="note"></p>
+				<div class="gallery10-1 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+					<ul class="thumbs">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+					</ul>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery10-1').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							numHolder: ".thumbs",
+							direction: 'vertical',
+							numCreate: false,
+							switchTime: false,
+							duration : 500
+						});
+					})
+				</script>
+			</div>
+
+			<div class="col">
+				<h3>AutoRotation On</h3>
+				<p class="note"></p>
+				<div class="gallery10-2 galleryV">
+					<span class="btns prev">Prev</span>
+					<div class="holder">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<span class="btns next">Next</span>
+				</div>
+				<script>
+					$(function(){
+						$('.gallery10-2').IHGallery({
+							btnPrev: 'span.prev',
+							btnNext: 'span.next',
+							direction: 'vertical',
+							numHolder: "<div class='thumbs'></div>",
+							numCreate: true,
+							switchTime: 2500,
+							duration : 500
+						});
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

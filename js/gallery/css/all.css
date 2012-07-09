@@ -1,0 +1,48 @@
+body{
+	margin:0;
+	color:#000;
+	font:11px arial,sans-serif;
+	background:#fff;
+}
+img{border-style:none;} 
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3, p{margin:0;}
+#page {
+	width:995px;
+	overflow:hidden;
+	margin:0 auto;
+	position:relative;
+	background:#dec0de;
+}
+.col{width:50%;float:left;}
+.red{color:#f00;}
+.note{color:#00f;font-style:italic;height:36px;}
+.options {font-size:13px; width:100%;margin:10px 0 20px;}
+table td{padding:5px;border-top:2px solid #000;}
+table tr td:first-child{font-weight:bold;}
+
+.holder{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+.btns{position:absolute;top:30px;width:35px;background:#0c0;text-align:center;cursor:pointer;display:none;}
+.prev{left:-35px;}
+.next{right:-35px;}
+.holder ul{margin:0;padding:0;list-style:none;}
+.holder li{float:left;}
+.holder li a{display:block;height:70px;border:1px solid #000;margin:5px;text-align:center;line-height:75px;font-size:36px;font-weight:bold;}
+/* example1 */
+.galleryV,
+.gallery{width:300px;border:2px solid #efc;margin:20px auto;position:relative;}
+.galleryV .holder li,
+.gallery .holder li{width:150px;}
+
+.thumbs li a.active{background:#f00;}
+.thumbs li{display:inline-block; background:#55f;border:1px solid #000; margin:5px; padding:5px; font-size:16px;}
+
+/* Vertival */
+.galleryV{width:150px;}
+.galleryV .holder{height:164px;}
+.galleryV .holder li{clear:left;}
