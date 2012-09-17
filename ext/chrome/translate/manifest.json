@@ -1,13 +1,19 @@
 {
-	"name": "Ololo extension",
+	"name": "Dictionary extension",
 	"version": "1.0",
 	"manifest_version": 2,
 	"icons": {
-		"16": "tt.png" 
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
 	},
 	"background": {
 		"scripts": ["background.js"]
 	},
-	"description": "Add to context menu new items",
-	"permissions": ["contextMenus","tabs","http://translate.google.ru/*","notifications"]
+	"options_page": "options.html",
+	"description": "This is Dictionary! Developer",
+	"permissions": ["contextMenus","tabs","http://translate.google.ru/*","notifications"],
+	"web_accessible_resources": [
+		"48.png","128.png","16.png", "index.html"
+	]
 }
