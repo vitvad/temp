@@ -1,0 +1,19 @@
+{
+	"name": "Dictionary extension",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": {
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"options_page": "options.html",
+	"description": "This is Dictionary! Developer",
+	"permissions": ["contextMenus","tabs","http://translate.google.ru/*","notifications"],
+	"web_accessible_resources": [
+		"48.png","128.png","16.png", "index.html"
+	]
+}

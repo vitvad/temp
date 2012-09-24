@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Dictionary</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="options.js"></script>
+</head>
+<body>
+	<h1>
+		<img src="64.png" alt="Dictionary">Dictionary
+	</h1>
+	<h2>Options</h2>
+	<form id="options">
+		<div>
+			<input type="checkbox" name="isActivated" id="isActivated" checked><label for="isActivated">Display a notification every</label>
+			<select name="frequency">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>10</option>
+				<option>15</option>
+				<option>20</option>
+				<option>25</option>
+				<option>30</option>
+			</select>minute(s).
+		</div>
+		<div>
+			<input type="checkbox" name="isNewWindow" id="isNewWindow" checked /><label for="isNewWindow">Open new window with Google translate?</label>
+		</div>
+		<div>
+			<button name="getSettings">View Settings</button><button name="exportSettings">Export Settings</button><button name="importSettings">Import Settings</button>
+			<div id="settings"></div>
+		</div>
+	</form>
+  </body>
+</html>
