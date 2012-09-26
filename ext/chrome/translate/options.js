@@ -20,6 +20,7 @@ window.addEventListener('load', function() {
 	options.isActivated.onchange = function() {
 		localStorage._isActivated = options.isActivated.checked;
 		disable(!options.isActivated.checked);
+		chrome.extension.sendMessage({appletDisable: !options.isActivated.checked}, function(response){});
 	};
 	options.isNewWindow.onchange = function() {
 		localStorage._isNewWindow = options.isNewWindow.checked;
@@ -27,6 +28,7 @@ window.addEventListener('load', function() {
 
 	options.frequency.onchange = function() {
 		localStorage._frequency = options.frequency.value;
+		chrome.extension.sendMessage({appletFrequency: options.frequency.value}, function(response){});
 	};
 
 /* View Settings */
@@ -39,7 +41,7 @@ window.addEventListener('load', function() {
 		var container = document.querySelector('#settings'), ls = localStorage;
 		var html = "<table>";
 		for(var i in ls){
-			html += "<tr><td title='delete' class='deleteItem' data-key='"+ i +"'>[X]</td><td><strong>"+ i +"</strong></td><td>"+ ls[i] +"</td></tr>";
+			html += "<tr><td title='delete' style='cursor:pointer;' class='deleteItem' data-key='"+ i +"'>[X]</td><td><strong>"+ i +"</strong></td><td>"+ ls[i] +"</td></tr>";
 		};
 		html += "</table>";
 		container.innerHTML = html;

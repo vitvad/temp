@@ -6,33 +6,35 @@
 	<script src="options.js"></script>
 </head>
 <body>
-	<h1>
-		<img src="64.png" alt="Dictionary">Dictionary
-	</h1>
-	<h2>Options</h2>
-	<form id="options">
-		<div>
-			<input type="checkbox" name="isActivated" id="isActivated" checked><label for="isActivated">Display a notification every</label>
-			<select name="frequency">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				<option>10</option>
-				<option>15</option>
-				<option>20</option>
-				<option>25</option>
-				<option>30</option>
-			</select>minute(s).
-		</div>
-		<div>
-			<input type="checkbox" name="isNewWindow" id="isNewWindow" checked /><label for="isNewWindow">Open new window with Google translate?</label>
-		</div>
-		<div>
-			<button name="getSettings">View Settings</button><button name="exportSettings">Export Settings</button><button name="importSettings">Import Settings</button>
-			<div id="settings"></div>
-		</div>
-	</form>
-  </body>
+	<div id="page">
+		<h1>
+			<img src="64.png" alt="Dictionary">Dictionary
+		</h1>
+		<h2>Options</h2>
+		<form id="options">
+			<div>
+				<input type="checkbox" name="isActivated" id="isActivated" checked><label for="isActivated">Display a notification every</label>
+				<select name="frequency">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+				</select>minute(s).
+			</div>
+			<div>
+				<input type="checkbox" name="isNewWindow" id="isNewWindow" checked /><label for="isNewWindow">Open new window with Google translate?</label>
+			</div>
+			<div>
+				<button name="getSettings">View Settings</button><button name="exportSettings">Export Settings</button><button name="importSettings">Import Settings</button>
+				<div id="settings"></div>
+			</div>
+		</form>
+	</div>
+</body>
 </html>

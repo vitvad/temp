@@ -4,13 +4,11 @@
 		- add other notifications
 */
 
-console.debugMode = true;
+console.debugMode = false;
 function log(){if(console.debugMode = true) console.log(arguments);}
 
 
-
-
-var ownOptions = 4, initialTime = 10000;
+var ownOptions = 4, initialTime = 60000, timerRef, note;
 // Conditionally initialize the options.
 if (!localStorage.isInitialized) {
 	localStorage._isActivated = true;   // The display activation.
@@ -19,33 +17,48 @@ if (!localStorage.isInitialized) {
 	localStorage._isNewWindow = true;	//open translation in new window
 }
 
+chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
+	log("onMessage", request, sender);
+	if(request.appletDisable == true){
+		if(timerRef) clearTimeout(timerRef);
+		note.cancel();
+	};
+	if(request.appletDisable == false || request.appletFrequency){
+		if(timerRef) clearTimeout(timerRef);
+		note.cancel();
+		getNotification();
+	};
+});
+
 /********************************** Context menu functionality */
 
-var contextProp  = {
-	title: "Translate en-ru",
-	contexts : ["selection"],
-	onclick: function(info, tab){
-		var url = "http://translate.google.ru/#en|ru|" + info.selectionText;
+var contextProp = (function getProp(){
+	return {
+		title: "Translate en-ru",
+		contexts : ["selection"],
+		onclick: function(info, tab){
+			var url = "http://translate.google.ru/#en|ru|" + info.selectionText;
 
-		//create tab with translation
-		if(localStorage._isNewWindow == "true"){
-			chrome.tabs.create({
-				url: url
-			}, function(tabObject){
+			//create tab with translation
+			if(localStorage._isNewWindow == "true"){
+				chrome.tabs.create({
+					url: url
+				}, function(tabObject){
+					getData(info);
+				});
+			}else{
 				getData(info);
-			});
-		}else{
-			getData(info);
-		};
+			};
+		}
 	}
-};
+})();
 
 /* add item to context menu */
 chrome.contextMenus.create( contextProp, function(){})
 
 /********************************** Notification functionality */
 
-function getData(info,undefined){
+function getData(info){
 	var req = new XMLHttpRequest();
 	req.open("GET", "http://translate.google.ru/translate_a/t?client=t&text="+ info.selectionText +"&hl=ru&sl=en&tl=ru&ie=UTF-8&oe=UTF-8&multires=1&ssel=0&tsel=0&sc=1", true);
 	req.onreadystatechange = function(){
@@ -75,7 +88,7 @@ function getData(info,undefined){
 	};
 	req.send(null);
 
-	if(typeof tabObject != undefined) log("tabObject=", tabObject);
+	if(typeof tabObject != "undefined") log("tabObject=", tabObject);
 }
 
 function saveToLocal(item){
@@ -90,7 +103,7 @@ function getNotification(undefined){
 
 	var item = getItem();
 
-	var note = window.webkitNotifications.createNotification(
+	note = window.webkitNotifications.createNotification(
 		'16.png',		// The image.
 		item.en.toUpperCase(),		// The title.
 		"press on me to get the answer"			// The body.
@@ -99,8 +112,8 @@ function getNotification(undefined){
 	note.show();
 	hideNotification(note);
 
-	//Get new one notification with some period
-	setTimeout(function(){
+	//Get new one notification with some delay
+	timerRef = setTimeout(function(){
 		getNotification();
 	}, localStorage._frequency * initialTime);
 

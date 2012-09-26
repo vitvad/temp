@@ -5,21 +5,52 @@
  */
 
 /* Clone the look and feel of "chrome://" pages. */
+html,body{width:100%;height:100%;}
 body {
-  margin: 10px;
-  font: 84% Arial, sans-serif
+	margin: 10px;
+	font: 84% Arial, sans-serif;
+	background: -webkit-linear-gradient(-45deg,  #cfe7fa 0%,#6393c1 100%);
 }
-
-h1 { font-size: 156% }
-
+div{width:100%;padding:5px 0;}
+h1 {
+	font-style: italic;
+	font-size: 45px;
+	line-height: 1em;
+	margin: 5px 0;
+	color: #DDDD82;
+	text-shadow: 1px 1px 3px #487F44;
+	vertical-align: baseline;
+}
+button{
+	color: #1A3C85;
+	background: -webkit-linear-gradient(top, #E6F0A3 0%,#D2E638 50%,#C3D825 51%,#DBF043 100%);
+	border: none;
+	border-radius: 10px 0 10px 0;
+	padding: 5px;
+	text-shadow: 1px 1px 3px #aaa;
+	font-weight: bold;
+	box-shadow: 1px 2px 10px #AAA;
+	margin: 5px 7px 0;
+	-webkit-transition-property: box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease;
+}
+button:hover{
+	box-shadow: 1px 2px 10px #fff;
+}
 h1 img {
-  margin: 1px 5px 0 1px;
-  vertical-align: middle
+	margin: 1px 25px 0 1px;
+	vertical-align: middle
 }
 
 h2 {
-  border-top: 1px solid #9cc2ef;
-  background-color: #ebeff9;
-  padding: 3px 5px;
-  font-size: 100%
+	border-top: 1px solid #9cc2ef;
+	background-color: #ebeff9;
+	padding: 3px 5px;
+	font-size: 100%;
 }
+#page{
+	width: 800px;
+	margin:0 auto;
+}
+#settings td{padding-top:4px;}
