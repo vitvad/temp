@@ -1,0 +1,8 @@
+#Tue Sep 18 19:58:41 EEST 2012
+WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
+defaultDestination=C\:/ae10/jboss-5.1.0.GA/server/atg_foundations/deploy/ATG.ear/dynamusic-web.war
+defaultVariables=
+eclipse.preferences.version=1
+includeTeamPrivateFiles=false
+map|0=j2ee-apps/dynamusic-j2ee/dynamusic-web.war|,|,|,|,
+useCurrentDateForDestinationFiles=false

@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN" 
+"http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+<import-items>
+
+<!-- 1 items of type organization -->
+<add-item item-descriptor="organization" id="root">
+  <set-property name="members"><![CDATA[portal-admin]]></set-property>
+  <set-property name="name"><![CDATA[root]]></set-property>
+</add-item>
+
+<!-- 7 items of type role -->
+<add-item item-descriptor="role" id="advanced-report-viewer">
+  <set-property name="description"><![CDATA[This role allows a user to view and interact with a report]]></set-property>
+  <!-- rdonly   <set-property name="version"><![CDATA[2]]></set-property>  -->
+  <set-property name="name"><![CDATA[Advanced Report Viewer]]></set-property>
+</add-item>
+
+<add-item item-descriptor="role" id="business-report-designer">
+  <set-property name="description"><![CDATA[This role allows a user to create or modify business reports using Query Studio]]></set-property>
+  <!-- rdonly   <set-property name="version"><![CDATA[2]]></set-property>  -->
+  <set-property name="name"><![CDATA[Business Report Designer]]></set-property>
+</add-item>
+
+<add-item item-descriptor="role" id="portal-admin">
+  <set-property name="description"><![CDATA[Portal Administrator]]></set-property>
+  <!-- rdonly   <set-property name="version"><![CDATA[1]]></set-property>  -->
+  <set-property name="name"><![CDATA[portal-admin]]></set-property>
+</add-item>
+
+<add-item item-descriptor="role" id="professional-report-designer">
+  <set-property name="description"><![CDATA[This role allows a user to create or modify professional reports using Report Studio]]></set-property>
+  <!-- rdonly   <set-property name="version"><![CDATA[2]]></set-property>  -->
+  <set-property name="name"><![CDATA[Professional Report Designer]]></set-property>
+</add-item>
+
+<add-item item-descriptor="role" id="report-viewer">
+  <set-property name="description"><![CDATA[This role allows a user to view a report]]></set-property>
+  <!-- rdonly   <set-property name="version"><![CDATA[2]]></set-property>  -->
+  <set-property name="name"><![CDATA[Report Viewer]]></set-property>
+</add-item>
+
+<add-item item-descriptor="role" id="reporting-administrator">
+  <set-property name="description"><![CDATA[This role allows a user to administer the reporting server]]></set-property>
+  <!-- rdonly   <set-property name="version"><![CDATA[2]]></set-property>  -->
+  <set-property name="name"><![CDATA[Reporting Administrator]]></set-property>
+</add-item>
+
+<add-item item-descriptor="role" id="reporting-metadata-designer">
+  <set-property name="description"><![CDATA[This role allows a user to create or modify reporting metadata using Framework Manager]]></set-property>
+  <!-- rdonly   <set-property name="version"><![CDATA[2]]></set-property>  -->
+  <set-property name="name"><![CDATA[Reporting Metadata Designer]]></set-property>
+</add-item>
+
+<!-- 32 items of type contactInfo -->
+<add-item item-descriptor="contactInfo" id="749">
+  <set-property name="postalCode"><![CDATA[39426]]></set-property>
+  <set-property name="city"><![CDATA[Sebastian]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Crackton]]></set-property>
+  <set-property name="state"><![CDATA[GA]]></set-property>
+  <set-property name="address1"><![CDATA[Roy Batty Road]]></set-property>
+  <set-property name="ownerId"><![CDATA[749]]></set-property>
+  <set-property name="firstName"><![CDATA[Scott]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="880007">
+  <set-property name="postalCode"><![CDATA[10104]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[James]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address2"><![CDATA[]]></set-property>
+  <set-property name="address1"><![CDATA[1290 Atlantic Ave.]]></set-property>
+  <set-property name="ownerId"><![CDATA[706]]></set-property>
+  <set-property name="firstName"><![CDATA[Marc]]></set-property>
+  <set-property name="middleName"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="708">
+  <set-property name="postalCode"><![CDATA[93401]]></set-property>
+  <set-property name="city"><![CDATA[San Luis Obispo]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Krakauer]]></set-property>
+  <set-property name="state"><![CDATA[CA]]></set-property>
+  <set-property name="address1"><![CDATA[987 Humble Rd.]]></set-property>
+  <set-property name="ownerId"><![CDATA[708]]></set-property>
+  <set-property name="firstName"><![CDATA[Susan]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="747">
+  <set-property name="postalCode"><![CDATA[86523]]></set-property>
+  <set-property name="city"><![CDATA[Vangelis]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Pieta]]></set-property>
+  <set-property name="state"><![CDATA[WY]]></set-property>
+  <set-property name="address1"><![CDATA[Ridley Scott Lane]]></set-property>
+  <set-property name="ownerId"><![CDATA[747]]></set-property>
+  <set-property name="firstName"><![CDATA[Sandy]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="746">
+  <set-property name="postalCode"><![CDATA[68721]]></set-property>
+  <set-property name="city"><![CDATA[Tyrell]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Von Istmal]]></set-property>
+  <set-property name="state"><![CDATA[CO]]></set-property>
+  <set-property name="address1"><![CDATA[267 Nexus Court]]></set-property>
+  <set-property name="ownerId"><![CDATA[746]]></set-property>
+  <set-property name="firstName"><![CDATA[Ivan]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="735">
+  <set-property name="postalCode"><![CDATA[35862]]></set-property>
+  <set-property name="city"><![CDATA[Birmingham]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Overton]]></set-property>
+  <set-property name="state"><![CDATA[AL]]></set-property>
+  <set-property name="address1"><![CDATA[9026 Filmmore Drive]]></set-property>
+  <set-property name="ownerId"><![CDATA[735]]></set-property>
+  <set-property name="firstName"><![CDATA[Elizabeth]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="711">
+  <set-property name="postalCode"><![CDATA[95368]]></set-property>
+  <set-property name="city"><![CDATA[San Francisco]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[King]]></set-property>
+  <set-property name="state"><![CDATA[CA]]></set-property>
+  <set-property name="address1"><![CDATA[897 Haight St.]]></set-property>
+  <set-property name="ownerId"><![CDATA[711]]></set-property>
+  <set-property name="firstName"><![CDATA[John]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="748">
+  <set-property name="postalCode"><![CDATA[76510]]></set-property>
+  <set-property name="city"><![CDATA[Zhora]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Daneschewed]]></set-property>
+  <set-property name="state"><![CDATA[AZ]]></set-property>
+  <set-property name="address1"><![CDATA[55 Voight-Kampff Street]]></set-property>
+  <set-property name="ownerId"><![CDATA[748]]></set-property>
+  <set-property name="firstName"><![CDATA[Sean]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="712">
+  <set-property name="postalCode"><![CDATA[56321]]></set-property>
+  <set-property name="city"><![CDATA[Madison]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Marshall]]></set-property>
+  <set-property name="state"><![CDATA[WI]]></set-property>
+  <set-property name="address1"><![CDATA[498 Peabody Ave.]]></set-property>
+  <set-property name="ownerId"><![CDATA[712]]></set-property>
+  <set-property name="firstName"><![CDATA[Greg]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="600">
+  <set-property name="postalCode"><![CDATA[10022]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Smith]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address1"><![CDATA[550 Madison Ave.]]></set-property>
+  <set-property name="ownerId"><![CDATA[600]]></set-property>
+  <set-property name="firstName"><![CDATA[Jack]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="860010">
+  <set-property name="postalCode"><![CDATA[02471]]></set-property>
+  <set-property name="city"><![CDATA[Watertown]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Friedlander]]></set-property>
+  <set-property name="state"><![CDATA[MA]]></set-property>
+  <set-property name="address2"><![CDATA[]]></set-property>
+  <set-property name="address1"><![CDATA[987 Pilsbury St.]]></set-property>
+  <set-property name="ownerId"><![CDATA[707]]></set-property>
+  <set-property name="firstName"><![CDATA[Eric]]></set-property>
+  <set-property name="middleName"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="701">
+  <set-property name="postalCode"><![CDATA[05641]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Jones]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address1"><![CDATA[245 Cellar Dr.]]></set-property>
+  <set-property name="ownerId"><![CDATA[701]]></set-property>
+  <set-property name="firstName"><![CDATA[Airto]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="745">
+  <set-property name="postalCode"><![CDATA[46210]]></set-property>
+  <set-property name="city"><![CDATA[Greasy Corner]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Norton]]></set-property>
+  <set-property name="state"><![CDATA[AR]]></set-property>
+  <set-property name="address1"><![CDATA[9503 Skidmore Lane]]></set-property>
+  <set-property name="ownerId"><![CDATA[745]]></set-property>
+  <set-property name="firstName"><![CDATA[Frank]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="707">
+  <set-property name="postalCode"><![CDATA[02471]]></set-property>
+  <set-property name="city"><![CDATA[Watertown]]></set-property>
+  <set-property name="country"><![CDATA[ca]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Black]]></set-property>
+  <set-property name="state"><![CDATA[ON]]></set-property>
+  <set-property name="address1"><![CDATA[987 Pilsbury St.]]></set-property>
+  <set-property name="ownerId"><![CDATA[707]]></set-property>
+  <set-property name="firstName"><![CDATA[Eric]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="110000">
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="714">
+  <set-property name="postalCode"><![CDATA[02365]]></set-property>
+  <set-property name="city"><![CDATA[Buffalo]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Hammond]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address2"><![CDATA[55th Floor]]></set-property>
+  <set-property name="address1"><![CDATA[58 Ninth Street]]></set-property>
+  <set-property name="ownerId"><![CDATA[714]]></set-property>
+  <set-property name="firstName"><![CDATA[Mary]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="736">
+  <set-property name="postalCode"><![CDATA[56870]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Pithy]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address1"><![CDATA[50 Lakeshore Drive]]></set-property>
+  <set-property name="ownerId"><![CDATA[736]]></set-property>
+  <set-property name="firstName"><![CDATA[Sasha]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="739">
+  <set-property name="postalCode"><![CDATA[11689]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Brockton]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address1"><![CDATA[1026 Blue Street]]></set-property>
+  <set-property name="ownerId"><![CDATA[739]]></set-property>
+  <set-property name="firstName"><![CDATA[Michael]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="706">
+  <set-property name="postalCode"><![CDATA[10104]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[James]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address1"><![CDATA[1290 Atlantic Ave.]]></set-property>
+  <set-property name="ownerId"><![CDATA[706]]></set-property>
+  <set-property name="firstName"><![CDATA[Marc]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="715">
+  <set-property name="postalCode"><![CDATA[65236]]></set-property>
+  <set-property name="city"><![CDATA[Omaha]]></set-property>
+  <set-property name="country"><![CDATA[ca]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Peckingham]]></set-property>
+  <set-property name="state"><![CDATA[ON]]></set-property>
+  <set-property name="address1"><![CDATA[389 State St.]]></set-property>
+  <set-property name="ownerId"><![CDATA[715]]></set-property>
+  <set-property name="firstName"><![CDATA[Myra]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="744">
+  <set-property name="postalCode"><![CDATA[85160]]></set-property>
+  <set-property name="city"><![CDATA[Butte]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Finkelstein]]></set-property>
+  <set-property name="state"><![CDATA[ID]]></set-property>
+  <set-property name="address1"><![CDATA[22 Wilshire Boulevard]]></set-property>
+  <set-property name="ownerId"><![CDATA[744]]></set-property>
+  <set-property name="firstName"><![CDATA[Paula]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="738">
+  <set-property name="postalCode"><![CDATA[25980]]></set-property>
+  <set-property name="city"><![CDATA[Saint Augustine]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Whynot]]></set-property>
+  <set-property name="state"><![CDATA[FL]]></set-property>
+  <set-property name="address1"><![CDATA[9 Sycamore Drive]]></set-property>
+  <set-property name="ownerId"><![CDATA[738]]></set-property>
+  <set-property name="firstName"><![CDATA[Donna]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="741">
+  <set-property name="postalCode"><![CDATA[00691]]></set-property>
+  <set-property name="city"><![CDATA[Portland]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Springford]]></set-property>
+  <set-property name="state"><![CDATA[ME]]></set-property>
+  <set-property name="address1"><![CDATA[680 Falmoth Blvd.]]></set-property>
+  <set-property name="ownerId"><![CDATA[741]]></set-property>
+  <set-property name="firstName"><![CDATA[Sally]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="737">
+  <set-property name="postalCode"><![CDATA[78520]]></set-property>
+  <set-property name="city"><![CDATA[Bozeman]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Hill]]></set-property>
+  <set-property name="state"><![CDATA[MT]]></set-property>
+  <set-property name="address1"><![CDATA[85 Snodgrass Boulevard]]></set-property>
+  <set-property name="ownerId"><![CDATA[737]]></set-property>
+  <set-property name="firstName"><![CDATA[Nick]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="724">
+  <set-property name="postalCode"><![CDATA[05640]]></set-property>
+  <set-property name="city"><![CDATA[Wilmington]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Wasalot]]></set-property>
+  <set-property name="state"><![CDATA[DE]]></set-property>
+  <set-property name="address1"><![CDATA[983 Corn St.]]></set-property>
+  <set-property name="ownerId"><![CDATA[724]]></set-property>
+  <set-property name="firstName"><![CDATA[Emily]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="710">
+  <set-property name="postalCode"><![CDATA[01256]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Johnson]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address1"><![CDATA[9823 Broadway]]></set-property>
+  <set-property name="ownerId"><![CDATA[710]]></set-property>
+  <set-property name="firstName"><![CDATA[Christopher]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="709">
+  <set-property name="postalCode"><![CDATA[01562]]></set-property>
+  <set-property name="city"><![CDATA[New York]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Wallensen]]></set-property>
+  <set-property name="state"><![CDATA[NY]]></set-property>
+  <set-property name="address1"><![CDATA[989 Hammond St.]]></set-property>
+  <set-property name="ownerId"><![CDATA[709]]></set-property>
+  <set-property name="firstName"><![CDATA[Kenny]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="740">
+  <set-property name="postalCode"><![CDATA[40895]]></set-property>
+  <set-property name="city"><![CDATA[Ponderosa Heights]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Sonaside]]></set-property>
+  <set-property name="state"><![CDATA[TN]]></set-property>
+  <set-property name="address1"><![CDATA[506 Nancy Lane]]></set-property>
+  <set-property name="ownerId"><![CDATA[740]]></set-property>
+  <set-property name="firstName"><![CDATA[Timmy]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="734">
+  <set-property name="postalCode"><![CDATA[56325]]></set-property>
+  <set-property name="city"><![CDATA[Inamorata]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Pascual]]></set-property>
+  <set-property name="state"><![CDATA[ID]]></set-property>
+  <set-property name="address1"><![CDATA[156 Selim St.]]></set-property>
+  <set-property name="ownerId"><![CDATA[734]]></set-property>
+  <set-property name="firstName"><![CDATA[Hermeta]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="1050007">
+  <set-property name="postalCode"><![CDATA[46210]]></set-property>
+  <set-property name="city"><![CDATA[Greasy Corner]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Norton]]></set-property>
+  <set-property name="state"><![CDATA[AR]]></set-property>
+  <set-property name="address2"><![CDATA[]]></set-property>
+  <set-property name="address1"><![CDATA[9503 Skidmore Lane]]></set-property>
+  <set-property name="firstName"><![CDATA[Frank]]></set-property>
+  <set-property name="middleName"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="742">
+  <set-property name="postalCode"><![CDATA[25980]]></set-property>
+  <set-property name="city"><![CDATA[Grover's Mill]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Adactara]]></set-property>
+  <set-property name="state"><![CDATA[NJ]]></set-property>
+  <set-property name="address1"><![CDATA[69 Yoyodyne Lane]]></set-property>
+  <set-property name="ownerId"><![CDATA[742]]></set-property>
+  <set-property name="firstName"><![CDATA[Esther]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<add-item item-descriptor="contactInfo" id="743">
+  <set-property name="postalCode"><![CDATA[98506]]></set-property>
+  <set-property name="city"><![CDATA[Los Angeles]]></set-property>
+  <set-property name="country"><![CDATA[us]]></set-property>
+  <set-property name="phoneNumber"><![CDATA[(212)555-1234]]></set-property>
+  <set-property name="lastName"><![CDATA[Madeira]]></set-property>
+  <set-property name="state"><![CDATA[CA]]></set-property>
+  <set-property name="address1"><![CDATA[802 Replicant Blvd.]]></set-property>
+  <set-property name="ownerId"><![CDATA[743]]></set-property>
+  <set-property name="firstName"><![CDATA[Franklin]]></set-property>
+  <set-property name="faxNumber"><![CDATA[(212)555-4321]]></set-property>
+</add-item>
+
+<!-- 29 items of type user -->
+<add-item item-descriptor="user" id="749">
+  <set-property name="email"><![CDATA[scott@example.com]]></set-property>
+  <set-property name="password"><![CDATA[21f63c6e971cd913a9c147e8652ca659]]></set-property>
+  <set-property name="lastName"><![CDATA[Crackton]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[1/17/1981 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Scott]]></set-property>
+  <set-property name="login"><![CDATA[scott]]></set-property>
+  <set-property name="homeAddress"><![CDATA[749]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 16:47:23]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="708">
+  <set-property name="email"><![CDATA[susan@example.com]]></set-property>
+  <set-property name="password"><![CDATA[ac575e3eecf0fa410518c2d3a2e7209f]]></set-property>
+  <set-property name="lastName"><![CDATA[Krakauer]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[2/15/1998 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/24/1972 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Susan]]></set-property>
+  <set-property name="login"><![CDATA[susan]]></set-property>
+  <set-property name="homeAddress"><![CDATA[708]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/16/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="747">
+  <set-property name="email"><![CDATA[sandy@example.com]]></set-property>
+  <set-property name="password"><![CDATA[d686a53fb86a6c31fa6faa1d9333267e]]></set-property>
+  <set-property name="lastName"><![CDATA[Pieta]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[12/9/1976 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Sandy]]></set-property>
+  <set-property name="login"><![CDATA[sandy]]></set-property>
+  <set-property name="homeAddress"><![CDATA[747]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/17/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="746">
+  <set-property name="email"><![CDATA[ivan@example.com]]></set-property>
+  <set-property name="password"><![CDATA[2c42e5cf1cdbafea04ed267018ef1511]]></set-property>
+  <set-property name="lastName"><![CDATA[Von Istmal]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[12/22/1978 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Ivan]]></set-property>
+  <set-property name="login"><![CDATA[ivan]]></set-property>
+  <set-property name="homeAddress"><![CDATA[746]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 16:17:13]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="735">
+  <set-property name="email"><![CDATA[liz@example.com]]></set-property>
+  <set-property name="password"><![CDATA[4af09080574089cbece43db636e2025f]]></set-property>
+  <set-property name="lastName"><![CDATA[Overton]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[10/6/1970 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Elizabeth]]></set-property>
+  <set-property name="login"><![CDATA[elizabeth]]></set-property>
+  <set-property name="homeAddress"><![CDATA[735]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[1/23/2000 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="711">
+  <set-property name="email"><![CDATA[john@example.com]]></set-property>
+  <set-property name="password"><![CDATA[527bd5b5d689e2c32ae974c6229ff785]]></set-property>
+  <set-property name="lastName"><![CDATA[King]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[3/8/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/15/1968 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[John]]></set-property>
+  <set-property name="login"><![CDATA[john]]></set-property>
+  <set-property name="homeAddress"><![CDATA[711]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/9/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="748">
+  <set-property name="email"><![CDATA[sean@example.com]]></set-property>
+  <set-property name="password"><![CDATA[9b938710211168f2902f9ed4357cd05c]]></set-property>
+  <set-property name="lastName"><![CDATA[Daneschewed]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[3/14/1955 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Sean]]></set-property>
+  <set-property name="login"><![CDATA[sean]]></set-property>
+  <set-property name="homeAddress"><![CDATA[748]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[5/5/2000 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="712">
+  <set-property name="email"><![CDATA[greg@example.com]]></set-property>
+  <set-property name="password"><![CDATA[ea26b0075d29530c636d6791bb5d73f4]]></set-property>
+  <set-property name="lastName"><![CDATA[Marshall]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[3/8/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[4/16/1969 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Greg]]></set-property>
+  <set-property name="login"><![CDATA[greg]]></set-property>
+  <set-property name="homeAddress"><![CDATA[712]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 15:30:04]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="600">
+  <set-property name="email"><![CDATA[jack@example.com]]></set-property>
+  <set-property name="password"><![CDATA[4ff9fc6e4e5d5f590c4f2134a8cc96d1]]></set-property>
+  <set-property name="lastName"><![CDATA[Smith]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[5/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[3/23/1942 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Jack]]></set-property>
+  <set-property name="login"><![CDATA[jack]]></set-property>
+  <set-property name="homeAddress"><![CDATA[600]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[2]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/17/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="701">
+  <set-property name="email"><![CDATA[airto@example.com]]></set-property>
+  <set-property name="password"><![CDATA[e05e67ed67c5f23ac91842c6a88c8799]]></set-property>
+  <set-property name="lastName"><![CDATA[Jones]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[5/12/1997 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/19/1963 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Airto]]></set-property>
+  <set-property name="login"><![CDATA[airto]]></set-property>
+  <set-property name="homeAddress"><![CDATA[701]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[2]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/16/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="745">
+  <set-property name="email"><![CDATA[frank@example.com]]></set-property>
+  <set-property name="password"><![CDATA[26253c50741faa9c2e2b836773c69fe6]]></set-property>
+  <set-property name="lastName"><![CDATA[Norton]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[2/28/1970 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Frank]]></set-property>
+  <set-property name="login"><![CDATA[frank]]></set-property>
+  <set-property name="homeAddress"><![CDATA[745]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[ja_JP]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[7/5/2000 12:26:24]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="707">
+  <set-property name="email"><![CDATA[eric@example.com]]></set-property>
+  <set-property name="password"><![CDATA[29988429c481f219b8c5ba8c071440e1]]></set-property>
+  <set-property name="lastName"><![CDATA[Black]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/23/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[3/15/1968 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Eric]]></set-property>
+  <set-property name="login"><![CDATA[eric]]></set-property>
+  <set-property name="homeAddress"><![CDATA[707]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 17:09:20]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="714">
+  <set-property name="email"><![CDATA[mary@example.com]]></set-property>
+  <set-property name="password"><![CDATA[b8e7be5dfa2ce0714d21dcfc7d72382c]]></set-property>
+  <set-property name="lastName"><![CDATA[Hammond]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[2/16/1998 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/25/1969 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Mary]]></set-property>
+  <set-property name="login"><![CDATA[mary]]></set-property>
+  <set-property name="homeAddress"><![CDATA[714]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/16/2000 13:05:52]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="736">
+  <set-property name="email"><![CDATA[sasha@example.com]]></set-property>
+  <set-property name="password"><![CDATA[481f693417e9a74e783caea72063b606]]></set-property>
+  <set-property name="lastName"><![CDATA[Pithy]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[9/7/1945 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Sasha]]></set-property>
+  <set-property name="login"><![CDATA[sasha]]></set-property>
+  <set-property name="homeAddress"><![CDATA[736]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 16:58:47]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="739">
+  <set-property name="email"><![CDATA[mike@example.com]]></set-property>
+  <set-property name="password"><![CDATA[0acf4539a14b3aa27deeb4cbdf6e989f]]></set-property>
+  <set-property name="lastName"><![CDATA[Brockton]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[2/26/1949 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Michael]]></set-property>
+  <set-property name="login"><![CDATA[michael]]></set-property>
+  <set-property name="homeAddress"><![CDATA[739]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 16:33:59]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="706">
+  <set-property name="email"><![CDATA[marc@example.com]]></set-property>
+  <set-property name="password"><![CDATA[97e1e59c0375e0f55c10d4314db20466]]></set-property>
+  <set-property name="lastName"><![CDATA[James]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/19/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[9/7/1960 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Marc]]></set-property>
+  <set-property name="login"><![CDATA[marc]]></set-property>
+  <set-property name="homeAddress"><![CDATA[706]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[fr_FR]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/27/2000 12:22:26]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="715">
+  <set-property name="email"><![CDATA[myra@example.com]]></set-property>
+  <set-property name="password"><![CDATA[ee0436e2bbffea899a517fa35fca0e96]]></set-property>
+  <set-property name="lastName"><![CDATA[Peckingham]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[5/7/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/14/1968 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Myra]]></set-property>
+  <set-property name="login"><![CDATA[myra]]></set-property>
+  <set-property name="homeAddress"><![CDATA[715]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 17:03:54]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="744">
+  <set-property name="email"><![CDATA[paula@example.com]]></set-property>
+  <set-property name="password"><![CDATA[1b207465eac83b5d4b12e335faa0b53a]]></set-property>
+  <set-property name="lastName"><![CDATA[Finkelstein]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[4/28/1975 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Paula]]></set-property>
+  <set-property name="login"><![CDATA[paula]]></set-property>
+  <set-property name="homeAddress"><![CDATA[744]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/9/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="738">
+  <set-property name="email"><![CDATA[donna@example.com]]></set-property>
+  <set-property name="password"><![CDATA[32ff0880c7c75d751d0f9ef3a816eae2]]></set-property>
+  <set-property name="lastName"><![CDATA[Whynot]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[12/31/1949 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Donna]]></set-property>
+  <set-property name="login"><![CDATA[donna]]></set-property>
+  <set-property name="homeAddress"><![CDATA[738]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/23/2000 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="741">
+  <set-property name="email"><![CDATA[sally@example.com]]></set-property>
+  <set-property name="password"><![CDATA[b8bba2baae4c2a08fdff4e223458577d]]></set-property>
+  <set-property name="lastName"><![CDATA[Springford]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[5/16/1996 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[7/18/1951 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Sally]]></set-property>
+  <set-property name="login"><![CDATA[sally]]></set-property>
+  <set-property name="homeAddress"><![CDATA[741]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[de_DE]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/9/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="737">
+  <set-property name="email"><![CDATA[nick@example.com]]></set-property>
+  <set-property name="password"><![CDATA[e2e42a07550863f8b67f5eb252581f6d]]></set-property>
+  <set-property name="lastName"><![CDATA[Hill]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[5/7/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[5/18/1967 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Nick]]></set-property>
+  <set-property name="login"><![CDATA[nick]]></set-property>
+  <set-property name="homeAddress"><![CDATA[737]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 15:46:44]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="724">
+  <set-property name="email"><![CDATA[emily@example.com]]></set-property>
+  <set-property name="password"><![CDATA[b02ae5aaefe3f7090668df034b0f2324]]></set-property>
+  <set-property name="lastName"><![CDATA[Wasalot]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[2/5/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/13/1975 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Emily]]></set-property>
+  <set-property name="login"><![CDATA[emily]]></set-property>
+  <set-property name="homeAddress"><![CDATA[724]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/28/2000 15:59:48]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="710">
+  <set-property name="email"><![CDATA[chris@example.com]]></set-property>
+  <set-property name="password"><![CDATA[6b34fe24ac2ff8103f6fce1f0da2ef57]]></set-property>
+  <set-property name="lastName"><![CDATA[Johnson]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[5/25/1963 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Christopher]]></set-property>
+  <set-property name="login"><![CDATA[chris]]></set-property>
+  <set-property name="homeAddress"><![CDATA[710]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/12/2000 11:21:48]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="709">
+  <set-property name="email"><![CDATA[kenny@example.com]]></set-property>
+  <set-property name="password"><![CDATA[fde290ea8d375a112998beacd5f4cff5]]></set-property>
+  <set-property name="lastName"><![CDATA[Wallensen]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[3/8/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/26/1959 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Kenny]]></set-property>
+  <set-property name="login"><![CDATA[kenny]]></set-property>
+  <set-property name="homeAddress"><![CDATA[709]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/9/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="740">
+  <set-property name="email"><![CDATA[timmy@example.com]]></set-property>
+  <set-property name="password"><![CDATA[6d02d81ae54bdce62edd5d054d3a4297]]></set-property>
+  <set-property name="lastName"><![CDATA[Sonaside]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[6/21/1958 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Timmy]]></set-property>
+  <set-property name="login"><![CDATA[timmy]]></set-property>
+  <set-property name="homeAddress"><![CDATA[740]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[2/12/2000 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="734">
+  <set-property name="email"><![CDATA[hertema@example.com]]></set-property>
+  <set-property name="password"><![CDATA[1f3ecadb1240064540597d1a3db8a13f]]></set-property>
+  <set-property name="lastName"><![CDATA[Pascual]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[1/16/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[12/16/1965 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Hermeta]]></set-property>
+  <set-property name="login"><![CDATA[hermeta]]></set-property>
+  <set-property name="homeAddress"><![CDATA[734]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[fr_FR]]></set-property>
+  <set-property name="userType"><![CDATA[2]]></set-property>
+  <set-property name="lastActivity"><![CDATA[6/16/1999 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="portal-admin">
+  <set-property name="password"><![CDATA[21232f297a57a5a743894a0e4a801fc3]]></set-property>
+  <set-property name="parentOrganization"><![CDATA[root]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[10/10/2008 11:54:48]]></set-property>
+  <set-property name="ancestors"><![CDATA[root]]></set-property>
+  <set-property name="registrationDate"><![CDATA[10/10/2008 11:54:48]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[admin]]></set-property>
+  <set-property name="roles"><![CDATA[portal-admin]]></set-property>
+  <set-property name="login"><![CDATA[admin]]></set-property>
+  <set-property name="homeAddress"><![CDATA[110000]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="742">
+  <set-property name="email"><![CDATA[esther@example.com]]></set-property>
+  <set-property name="password"><![CDATA[c7ec7622a90bff8a4f08ba7f4a3dd490]]></set-property>
+  <set-property name="lastName"><![CDATA[Adactara]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[10/30/1938 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Esther]]></set-property>
+  <set-property name="login"><![CDATA[esther]]></set-property>
+  <set-property name="homeAddress"><![CDATA[742]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[3/14/2000 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+<add-item item-descriptor="user" id="743">
+  <set-property name="email"><![CDATA[franklin@example.com]]></set-property>
+  <set-property name="password"><![CDATA[9c1f33ca0b1f1b1055c3144d69853927]]></set-property>
+  <set-property name="lastName"><![CDATA[Madeira]]></set-property>
+  <set-property name="gender"><![CDATA[male]]></set-property>
+  <set-property name="lastPasswordUpdate"><![CDATA[__NULL__]]></set-property>
+  <set-property name="receiveEmail"><![CDATA[__NULL__]]></set-property>
+  <set-property name="registrationDate"><![CDATA[4/15/1999 00:00:00]]></set-property>
+  <set-property name="dateOfBirth"><![CDATA[11/1/1919 00:00:00]]></set-property>
+  <set-property name="member"><![CDATA[true]]></set-property>
+  <set-property name="firstName"><![CDATA[Franklin]]></set-property>
+  <set-property name="login"><![CDATA[franklin]]></set-property>
+  <set-property name="homeAddress"><![CDATA[743]]></set-property>
+  <set-property name="emailStatus"><![CDATA[__NULL__]]></set-property>
+  <set-property name="autoLogin"><![CDATA[__NULL__]]></set-property>
+  <set-property name="locale"><![CDATA[en_US]]></set-property>
+  <set-property name="userType"><![CDATA[1]]></set-property>
+  <set-property name="lastActivity"><![CDATA[5/12/2000 00:00:00]]></set-property>
+  <set-property name="generatedPassword"><![CDATA[__NULL__]]></set-property>
+</add-item>
+
+</import-items>
+
+</gsa-template>

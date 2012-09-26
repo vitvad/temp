@@ -1,0 +1,128 @@
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN" 
+"http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+
+  <header>
+    <name>SongsRepository</name>
+    <author>Diana Carroll</author>
+    <description> 
+        This file defines the Songs repository for the Dynamusic application.
+    </description>
+  </header>
+
+  <item-descriptor name="song" display-property="title" sub-type-property="type" query-cache-size="100">
+    <table name="dynamusic_song" 
+           type="primary" 
+           id-column-name="id"> 
+      <property name="id" data-type="string"/>
+      <property name="title" column-name="title" data-type="string"/>  
+      <property name="songGenre" column-name="genre" data-type="enumerated">
+        <attribute name="useCodeForValue" value="false"/>
+          <option value="jazz"/> 
+          <option value="country"/> 
+          <option value="pop"/> 
+          <option value="blues"/> 
+          <option value="classical"/> 
+      </property>  
+      <property name="downloadURL" column-name="download" data-type="string"/>  
+      <property name="artist" column-name="artist" item-type="artist"/>
+      <property name="description" column-name="lyrics" data-type="string"/>
+
+      <property name="type" column-name="song_type" data-type="enumerated" writable="false">
+        <attribute name="useCodeForValue" value="false"/>	
+          <option value="non-classical"/>
+          <option value="classical"/>
+      </property>
+      
+    </table> 
+    
+  </item-descriptor>
+
+
+  <item-descriptor name="classical-song" super-type="song" sub-type-value="classical">
+    <table name="dynamusic_classical_song" type="auxiliary" id-column-name="song_id">
+      <property name="performer" data-type="string"/>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="artist" display-property="name" query-cache-size="100">
+    <table name="dynamusic_artist" 
+           type="primary" 
+           id-column-name="id"> 
+      <property name="id" data-type="string"/>
+      <property name="name" column-name="name" data-type="string"/>  
+      <property name="description" column-name="description" data-type="string"/>  
+      <property name="photoURL" column-name="image" data-type="string"/>  
+      <property name="artistGenre" column-name="genre" data-type="enumerated">
+        <attribute name="useCodeForValue" value="false"/>
+          <option value="jazz"/> 
+          <option value="country"/> 
+          <option value="pop"/> 
+          <option value="blues"/> 
+          <option value="classical"/> 
+      </property>
+    </table> 
+    
+    <!-- a multi table to define a many:many relationship between albums and
+         artists (EAP, Chapter 5) -->
+    <table name="dynamusic_artist_album" id-column-name="artist_id" type="multi">
+      <property name="albums" column-name="album_id" component-item-type="album" data-type="set">
+      </property>
+    </table>
+
+  </item-descriptor>
+
+  <item-descriptor name="album" display-property="title" query-cache-size="100">
+    <table name="dynamusic_album" 
+           type="primary" 
+           id-column-name="id"> 
+      <property name="id" data-type="string"/>
+      <property name="title" column-name="title" data-type="string"/>  
+      <property name="coverURL" column-name="cover" data-type="string"/>  
+      <property name="description" column-name="description" data-type="string"/>  
+      <property name="date" column-name="published" data-type="timestamp"/>  
+      <property name="artist" column-name="artist" item-type="artist"/>
+      
+      <!-- albumGenre is an override property for the genre property;
+           this column will store the override value for that property  (EAP, Chapter 7) -->
+      <property name="albumGenre" column-name="genre" data-type="enumerated" writable="true">
+          <attribute name="useCodeForValue" value="false"/>
+             <option value="jazz"/> 
+             <option value="country"/> 
+             <option value="pop"/> 
+             <option value="blues"/> 
+             <option value="classical"/> 
+      </property>
+
+    </table> 
+    <table name="dynamusic_album_songs" type="multi"
+         id-column-name="album_id">
+    	<property name="songList" data-type="set"
+              component-item-type="song"
+              column-name="song_list" 
+              cascade="delete"/>
+    </table>
+    
+    <!-- a multi table to define a many:many relationship between albums and
+         artists (Foundations, Chapter 5) -->
+    <table name="dynamusic_artist_album" id-column-name="album_id" type="multi">
+      <property name="artists" column-name="artist_id" component-item-type="artist" data-type="set">
+      </property>
+    </table>
+
+    <!-- genre is an overridable derived property (EAP, Chapter 7) -->
+    <property name="genre" data-type="enumerated" writable="true">
+      <derivation override-property="albumGenre">
+        <expression>artist.artistGenre</expression>
+      </derivation>
+    </property>
+
+  </item-descriptor>
+  
+  <!-- preload all items in the repository in to cache (EAP, Chapter 8) -->
+  <query-items item-descriptor="song" quiet="true">ALL</query-items>
+  <query-items item-descriptor="album" quiet="true">ALL</query-items>
+  <query-items item-descriptor="artist" quiet="true">ALL</query-items>
+    
+</gsa-template>

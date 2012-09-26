@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DSS/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DSS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DPS/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DPS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DAS/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DAS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DAS/lib/servlet.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DAS/lib/ice.jar"/>
+	<classpathentry kind="lib" path="C:/AE91/ATG9.1/DAS/solid/SolidDriver2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

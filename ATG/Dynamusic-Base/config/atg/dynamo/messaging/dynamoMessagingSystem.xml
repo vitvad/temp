@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dynamo-message-system>
+  <patchbay>
+
+
+    <message-source>
+      <nucleus-name>
+        /dynamusic/ViewItemEventSender
+      </nucleus-name>
+      
+      <output-port>
+        <port-name>
+	        DEFAULT
+	      </port-name>
+
+	      <output-destination>
+	        <provider-name>
+	          local
+	        </provider-name>
+	        <destination-name>
+	          localdms:/local/DPSTopic/ViewItemEvents
+	        </destination-name>
+	        <destination-type>
+	          Topic
+	        </destination-type>
+        </output-destination>
+      </output-port>
+   </message-source>
+
+  </patchbay>
+</dynamo-message-system>
