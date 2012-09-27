@@ -4,7 +4,7 @@
 		- add other notifications
 */
 
-console.debugMode = false;
+console.debugMode = true;
 function log(){if(console.debugMode = true) console.log(arguments);}
 
 
@@ -15,6 +15,19 @@ if (!localStorage.isInitialized) {
 	localStorage._frequency = 1;        // The display frequency, in minutes.
 	localStorage._isInitialized = true; // The option initialization.
 	localStorage._isNewWindow = true;	//open translation in new window
+
+	localStorage["a trifle"] = {"en":"a trifle","ru":"немного","synonyms":["немного","слегка"]};
+	localStorage["beverage"] = {"en":"beverage","ru":"напиток","synonyms":["напиток","питье"]}
+	localStorage["corresponding"] = {"en":"corresponding","ru":"соответствующий","synonyms":["соответствующий","соответственный","подобный","ведущий переписку"]}
+	localStorage["dissipation"] = {"en":"dissipation","ru":"диссипация","synonyms":["диссипация","рассеяние","рассеивание","разложение","распыление","расточительство","расточение","растрачивание","исчезновение","распад","беспутный образ жизни","утечка","преобразование","легкомысленные развлечения"]}
+	localStorage["embarrassed"] = {"en":"embarrassed","ru":"смущение","synonyms":["смущенный","растерянный","стесненный","запутавшийся в долгах"]}
+	localStorage["intents"] = {"en":"intents","ru":"намерения"}
+	localStorage["namesake"] = {"en":"namesake","ru":"тезка","synonyms":["тезка","человек, названный в честь кого-л."]}
+	localStorage["requirements"] = {"en":"requirements","ru":"требование","synonyms":["требование","запросы","технические требования","реквизиты"]}
+	localStorage["scissors"] = {"en":"scissors","ru":"ножницы","synonyms":["ножницы"]}
+	localStorage["soapy"] = {"en":"soapy","ru":"мыльный","synonyms":["мыльный","елейный","вкрадчивый","мылкий","покрытый мылом"]}
+	localStorage["theft"] = {"en":"theft","ru":"кража","synonyms":["кража","воровство","хищение","покража","украденные вещи"]}
+	localStorage["thieves"] = {"en":"thieves","ru":"воры"}
 }
 
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
@@ -98,34 +111,43 @@ function saveToLocal(item){
 }
 function random(max){var min=ownOptions;return Math.floor(Math.random() * (max - min + 1)) + min;}
 
-function getNotification(undefined){
+function getNotification(){
+	log("Get Note","Is ", localStorage._isActivated);
 	if(localStorage._isActivated == "false") return;
-
-	var item = getItem();
-
-	note = window.webkitNotifications.createNotification(
-		'16.png',		// The image.
-		item.en.toUpperCase(),		// The title.
-		"press on me to get the answer"			// The body.
-	);
-	//var note = window.webkitNotifications.createHTMLNotification('index.html');
-	note.show();
-	hideNotification(note);
 
 	//Get new one notification with some delay
 	timerRef = setTimeout(function(){
+		buildNote();
 		getNotification();
 	}, localStorage._frequency * initialTime);
+}
 
-	//Get this Item with translation
-	note.onclick = function(){
-		note.cancel();
+function buildNote(){
+	var item = getItem();
 
+	if(item){
 		note = window.webkitNotifications.createNotification(
 			'16.png',		// The image.
-			item.en + "  -  " + item.ru,		// The title.
-			(typeof item.synonyms !== typeof undefined ? item.synonyms : "")			// The body.
+			item.en.toUpperCase(),		// The title.
+			"press on me to get the answer"			// The body.
 		);
+
+		//Get this Item with translation
+		note.onclick = function(){
+			if(timerRef) clearTimeout(timerRef);
+			note.cancel();
+
+			note = window.webkitNotifications.createNotification(
+				'16.png',		// The image.
+				item.en + "  -  " + item.ru,		// The title.
+				(typeof item.synonyms != "undefined" ? item.synonyms : "")			// The body.
+			);
+			note.show();
+			note.onclose = function(){
+				getNotification();
+			}
+		}
+
 		note.show();
 		hideNotification(note);
 	}
@@ -133,6 +155,7 @@ function getNotification(undefined){
 
 //Hide notification
 function hideNotification(note){
+	if(timerRef) clearTimeout(timerRef);
 	setTimeout(function(){
 		note.cancel();
 	},7000);
