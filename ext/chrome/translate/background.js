@@ -1,4 +1,4 @@
-/*
+п»ї/*
 	*TODO:
 		- rating for each words how offen translation for it was showed
 		- add other notifications
@@ -15,19 +15,19 @@ if (!localStorage.isInitialized) {
 	localStorage._frequency = 1;        // The display frequency, in minutes.
 	localStorage._isInitialized = true; // The option initialization.
 	localStorage._isNewWindow = true;	//open translation in new window
-
-	localStorage["a trifle"] = {"en":"a trifle","ru":"немного","synonyms":["немного","слегка"]};
-	localStorage["beverage"] = {"en":"beverage","ru":"напиток","synonyms":["напиток","питье"]}
-	localStorage["corresponding"] = {"en":"corresponding","ru":"соответствующий","synonyms":["соответствующий","соответственный","подобный","ведущий переписку"]}
-	localStorage["dissipation"] = {"en":"dissipation","ru":"диссипация","synonyms":["диссипация","рассеяние","рассеивание","разложение","распыление","расточительство","расточение","растрачивание","исчезновение","распад","беспутный образ жизни","утечка","преобразование","легкомысленные развлечения"]}
-	localStorage["embarrassed"] = {"en":"embarrassed","ru":"смущение","synonyms":["смущенный","растерянный","стесненный","запутавшийся в долгах"]}
-	localStorage["intents"] = {"en":"intents","ru":"намерения"}
-	localStorage["namesake"] = {"en":"namesake","ru":"тезка","synonyms":["тезка","человек, названный в честь кого-л."]}
-	localStorage["requirements"] = {"en":"requirements","ru":"требование","synonyms":["требование","запросы","технические требования","реквизиты"]}
-	localStorage["scissors"] = {"en":"scissors","ru":"ножницы","synonyms":["ножницы"]}
-	localStorage["soapy"] = {"en":"soapy","ru":"мыльный","synonyms":["мыльный","елейный","вкрадчивый","мылкий","покрытый мылом"]}
-	localStorage["theft"] = {"en":"theft","ru":"кража","synonyms":["кража","воровство","хищение","покража","украденные вещи"]}
-	localStorage["thieves"] = {"en":"thieves","ru":"воры"}
+	
+	localStorage["a trifle"] = '{"en":"a trifle","ru":"РЅРµРјРЅРѕРіРѕ","synonyms":["РЅРµРјРЅРѕРіРѕ","СЃР»РµРіРєР°"]}';
+	localStorage["beverage"] = '{"en":"beverage","ru":"РЅР°РїРёС‚РѕРє","synonyms":["РЅР°РїРёС‚РѕРє","РїРёС‚СЊРµ"]}';
+	localStorage["corresponding"] = '{"en":"corresponding","ru":"СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№","synonyms":["СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№","СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Р№","РїРѕРґРѕР±РЅС‹Р№","РІРµРґСѓС‰РёР№ РїРµСЂРµРїРёСЃРєСѓ"]}';
+	localStorage["dissipation"] = '{"en":"dissipation","ru":"РґРёСЃСЃРёРїР°С†РёСЏ","synonyms":["РґРёСЃСЃРёРїР°С†РёСЏ","СЂР°СЃСЃРµСЏРЅРёРµ","СЂР°СЃСЃРµРёРІР°РЅРёРµ","СЂР°Р·Р»РѕР¶РµРЅРёРµ","СЂР°СЃРїС‹Р»РµРЅРёРµ","СЂР°СЃС‚РѕС‡РёС‚РµР»СЊСЃС‚РІРѕ","СЂР°СЃС‚РѕС‡РµРЅРёРµ","СЂР°СЃС‚СЂР°С‡РёРІР°РЅРёРµ","РёСЃС‡РµР·РЅРѕРІРµРЅРёРµ","СЂР°СЃРїР°Рґ","Р±РµСЃРїСѓС‚РЅС‹Р№ РѕР±СЂР°Р· Р¶РёР·РЅРё","СѓС‚РµС‡РєР°","РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ","Р»РµРіРєРѕРјС‹СЃР»РµРЅРЅС‹Рµ СЂР°Р·РІР»РµС‡РµРЅРёСЏ"]}';
+	localStorage["embarrassed"] = '{"en":"embarrassed","ru":"СЃРјСѓС‰РµРЅРёРµ","synonyms":["СЃРјСѓС‰РµРЅРЅС‹Р№","СЂР°СЃС‚РµСЂСЏРЅРЅС‹Р№","СЃС‚РµСЃРЅРµРЅРЅС‹Р№","Р·Р°РїСѓС‚Р°РІС€РёР№СЃСЏ РІ РґРѕР»РіР°С…"]}';
+	localStorage["intents"] = '{"en":"intents","ru":"РЅР°РјРµСЂРµРЅРёСЏ"}';
+	localStorage["namesake"] = '{"en":"namesake","ru":"С‚РµР·РєР°","synonyms":["С‚РµР·РєР°","С‡РµР»РѕРІРµРє, РЅР°Р·РІР°РЅРЅС‹Р№ РІ С‡РµСЃС‚СЊ РєРѕРіРѕ-Р»."]}';
+	localStorage["requirements"] = '{"en":"requirements","ru":"С‚СЂРµР±РѕРІР°РЅРёРµ","synonyms":["С‚СЂРµР±РѕРІР°РЅРёРµ","Р·Р°РїСЂРѕСЃС‹","С‚РµС…РЅРёС‡РµСЃРєРёРµ С‚СЂРµР±РѕРІР°РЅРёСЏ","СЂРµРєРІРёР·РёС‚С‹"]}';
+	localStorage["scissors"] = '{"en":"scissors","ru":"РЅРѕР¶РЅРёС†С‹","synonyms":["РЅРѕР¶РЅРёС†С‹"]}';
+	localStorage["soapy"] = '{"en":"soapy","ru":"РјС‹Р»СЊРЅС‹Р№","synonyms":["РјС‹Р»СЊРЅС‹Р№","РµР»РµР№РЅС‹Р№","РІРєСЂР°РґС‡РёРІС‹Р№","РјС‹Р»РєРёР№","РїРѕРєСЂС‹С‚С‹Р№ РјС‹Р»РѕРј"]}';
+	localStorage["theft"] = '{"en":"theft","ru":"РєСЂР°Р¶Р°","synonyms":["РєСЂР°Р¶Р°","РІРѕСЂРѕРІСЃС‚РІРѕ","С…РёС‰РµРЅРёРµ","РїРѕРєСЂР°Р¶Р°","СѓРєСЂР°РґРµРЅРЅС‹Рµ РІРµС‰Рё"]}';
+	localStorage["thieves"] = '{"en":"thieves","ru":"РІРѕСЂС‹"}';
 }
 
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
