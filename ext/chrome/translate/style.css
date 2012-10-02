@@ -7,7 +7,7 @@
 /* Clone the look and feel of "chrome://" pages. */
 html,body{width:100%;height:100%;}
 body {
-	margin: 10px;
+	margin: 0;
 	font: 84% Arial, sans-serif;
 	background: -webkit-linear-gradient(-45deg,  #cfe7fa 0%,#6393c1 100%);
 }
