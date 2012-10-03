@@ -8,14 +8,15 @@ console.debugMode = true;
 function log(){if(console.debugMode = true) console.log(arguments);}
 
 
-var ownOptions = 4, initialTime = 60000, timerRef, note;
+var ownOptions = 5, initialTime = 60000, timerRef, note;
 // Conditionally initialize the options.
 if (!localStorage.isInitialized) {
 	localStorage._isActivated = true;   // The display activation.
 	localStorage._frequency = 1;        // The display frequency, in minutes.
 	localStorage._isInitialized = true; // The option initialization.
 	localStorage._isNewWindow = true;	//open translation in new window
-	
+	localStorage._showTheAnswer = false;//show translation for word in notification straight away
+
 	localStorage["a trifle"] = '{"en":"a trifle","ru":"немного","synonyms":["немного","слегка"]}';
 	localStorage["beverage"] = '{"en":"beverage","ru":"напиток","synonyms":["напиток","питье"]}';
 	localStorage["corresponding"] = '{"en":"corresponding","ru":"соответствующий","synonyms":["соответствующий","соответственный","подобный","ведущий переписку"]}';
@@ -34,11 +35,11 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 	log("onMessage", request, sender);
 	if(request.appletDisable == true){
 		if(timerRef) clearTimeout(timerRef);
-		note.cancel();
+		if(note) note.cancel();
 	};
 	if(request.appletDisable == false || request.appletFrequency){
 		if(timerRef) clearTimeout(timerRef);
-		note.cancel();
+		if(note) note.cancel();
 		getNotification();
 	};
 });
@@ -126,25 +127,33 @@ function buildNote(){
 	var item = getItem();
 
 	if(item){
-		note = window.webkitNotifications.createNotification(
-			'16.png',		// The image.
-			item.en.toUpperCase(),		// The title.
-			"press on me to get the answer"			// The body.
-		);
-
-		//Get this Item with translation
-		note.onclick = function(){
-			if(timerRef) clearTimeout(timerRef);
-			note.cancel();
-
+		if(localStorage._showTheAnswer == "true"){
 			note = window.webkitNotifications.createNotification(
 				'16.png',		// The image.
 				item.en + "  -  " + item.ru,		// The title.
 				(typeof item.synonyms != "undefined" ? item.synonyms : "")			// The body.
 			);
-			note.show();
-			note.onclose = function(){
-				getNotification();
+		}else{
+			note = window.webkitNotifications.createNotification(
+				'16.png',		// The image.
+				item.en.toUpperCase(),		// The title.
+				"press on me to get the answer"			// The body.
+			);
+
+			//Get this Item with translation
+			note.onclick = function(){
+				if(timerRef) clearTimeout(timerRef);
+				note.cancel();
+
+				note = window.webkitNotifications.createNotification(
+					'16.png',		// The image.
+					item.en + "  -  " + item.ru,		// The title.
+					(typeof item.synonyms != "undefined" ? item.synonyms : "")			// The body.
+				);
+				note.show();
+				note.onclose = function(){
+					getNotification();
+				}
 			}
 		}
 

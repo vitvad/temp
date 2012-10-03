@@ -1,15 +1,9 @@
-/**
- * Copyright (c) 2011 The Chromium Authors. All rights reserved.
- * Use of this source code is governed by a BSD-style license that can be
- * found in the LICENSE file.
- */
-
-/* Clone the look and feel of "chrome://" pages. */
 html,body{width:100%;height:100%;}
 body {
 	margin: 0;
 	font: 84% Arial, sans-serif;
 	background: -webkit-linear-gradient(-45deg,  #cfe7fa 0%,#6393c1 100%);
+	background-attachment: fixed;
 }
 div{width:100%;padding:5px 0;}
 h1 {
@@ -52,5 +46,6 @@ h2 {
 #page{
 	width: 800px;
 	margin:0 auto;
+	overflow:hidden;
 }
 #settings td{padding-top:4px;}

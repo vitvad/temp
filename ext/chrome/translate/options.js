@@ -31,6 +31,11 @@ window.addEventListener('load', function() {
 		chrome.extension.sendMessage({appletFrequency: options.frequency.value}, function(response){});
 	};
 
+	options.showTheAnswer.onchange = function() {
+		localStorage._showTheAnswer = options.showTheAnswer.checked;
+		chrome.extension.sendMessage({appletFrequency: options.showTheAnswer.checked}, function(response){});
+	};
+
 /* View Settings */
 	options.getSettings.onclick = function(){
 		getSettings();
